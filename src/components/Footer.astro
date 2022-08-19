@@ -1,9 +1,22 @@
 ---
-const today = new Date();
+import { Icon } from 'astro-icon';
 ---
 
 <footer>
-    &copy; {today.getFullYear()} Sean Collins
+    <p>
+        Made with <Icon name="bi:heart-fill" color="red" width="14" />, 
+        <Icon name="fa-solid:headphones" width="14" /> and 
+        <Icon name="fa-solid:coffee" width="16" />
+    </p>
+    <a href="https://www.linkedin.com/in/theseancollins/" target="_blank">
+        <Icon name="fa-brands:linkedin" width="16" />
+    </a>
+    <a href="https://github.com/thehouseplant" target="_blank">
+        <Icon name="fa-brands:github" width="16" />
+    </a>
+    <a href="https://www.instagram.com/thehouseplant/" target="_blank">
+        <Icon name="fa-brands:instagram" width="16" />
+    </a>
 </footer>
 <style>
     footer {
@@ -11,7 +24,7 @@ const today = new Date();
         bottom: 0;
         left: 0;
         right: 0;
-        height: 50px;
+        height: 75px;
         padding: 25px;
         text-align: center;
         border-top: 0;
