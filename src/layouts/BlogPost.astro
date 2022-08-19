@@ -1,0 +1,42 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+export interface Props {
+    content: {
+        title: string;
+        description: string;
+        pubDate?: string;
+        updatedDate?: string;
+    };
+}
+
+const {
+    content: { title, description, pubDate, updatedDate },
+} = Astro.props as Props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css">
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<Header />
+        <main>
+            <article>
+                <h1>{title}</h1>
+                {pubDate && <time>{pubDate}</time>}
+                {updatedDate && <div>Last updated on <time>{updatedDate}</time></div>}
+                <hr />
+                <slot />
+            </article>
+        </main>
+		<Footer />
+	</body>
+</html>
