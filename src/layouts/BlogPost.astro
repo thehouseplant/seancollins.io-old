@@ -27,11 +27,10 @@ const {
 	<body>
 		<Header />
         <main class="container mx-auto py-6">
-            <article>
+            <article class="prose max-w-none">
                 <h1>{title}</h1>
                 {pubDate && <time>{pubDate}</time>}
                 {updatedDate && <div>Last updated on <time>{updatedDate}</time></div>}
-                <hr />
                 <slot />
             </article>
         </main>
