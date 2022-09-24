@@ -21,13 +21,12 @@ const {
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
 		<Header />
-        <main>
+        <main class="container mx-auto py-6">
             <article>
                 <h1>{title}</h1>
                 {pubDate && <time>{pubDate}</time>}
